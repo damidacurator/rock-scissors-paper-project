@@ -6,51 +6,82 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
+  <script src ="./app.js" defer></script> <!-- defer ensures the script runs after the HTML is fully loaded -->
   
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body class="body">
+    <div class="container">
+     <header class="header">
+        <img src="./images/logo.svg" alt="logo" class="logo">
+        <div class="score">
+            <div class="score-title">Score</div>
+            <div class="score-value" id="score">0</div>
+        </div>
+        </header>
+        <section class="game">
+            <button class="choice-btn" data-choice = "paper">
+                <div class="choice paper">
+                    <img src="./images/icon-paper.svg" alt="Paper" >
+                </div>
+            </button>
+            <button class="choice-btn" data-choice = "scissors">
+                <div class="choice scissors">
+                    <img src="./images/icon-scissors.svg" alt="Scissors" >
+                </div>
+            </button>
+            <button class="choice-btn" data-choice = "rock">
+                <div class="choice rock">
+                    <img src="./images/icon-rock.svg" alt="Rock" >
+                </div>
+            </button>
+        </section>
+        </div>
 
-<div class="container">
-  <img src="./images/Backgroung.jpg" alt="Background Image" class="background">
-  </div>
-<div class="container2">
-  <img src ="images/logo.svg" alt="Rock, Paper. Scissors" class="logo"> 
-  </div>
-  <div class="container3">
-  <img src="./images/bg-triangle.svg" alt="Triangle Background" class="triangle-bg">
-  <button class="paper">
-    <img src="./images/icon-paper.svg" class="paper1">
-  </button>
-  <button class="rock">
-    <img src="./images/icon-rock.svg" class="rock1">
-    </button>
-    <button class="scissors" class="button">
-    <img src="./images/icon-scissors.svg" class="scissors1">
-  </button>
+        <section class ="results hidden">
+            <h2 class="results-heading"> You Picked</h2>
+            <h2 class="results-heading">The House Picked</h2>
+            <div class="results-result"></div>
+            <div class = "result-winner hidden">
+                <h3 class="result-text">You Win</h3>
+                <button class="play-again-btn">Play Again</button>
+            </div>
+            <div class="results-result"></div>
+        </section>
+
+<button class="rules-btn" tabindex="1">rules</button>
+<div class="modal">
+    <div class="modal-container">
+        <header class="modal-header">
+            <h2 class="modal-heading">
+                rules
+            </h2>
+            <button class="close-btn">
+                <img src="./images/icon-close.svg" alt="close">
+            </button>
+        </header>
+        <img src="./images/image-rules.svg" alt="rules image" class="rules-img">
+    </div>
 </div>
-<div class="button">
-  <button class="rules">
-   <h1> Rules</h1>
-  </button>
-</div>
-
-</body>
-  
-  
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        <footer class="footer">
+         <div class="attribution">
     Coded by <a href="#">Idowu OLuwadamilare Samuel</a>.
-  </div>  
-</body>
-</html>
+    COTACT ME <a href="https://linktr.ee/damithecurator" target="_blank">SOCIALS</a>. 
+  </div>
+  </footer>  
+        </div>
+        <!-- <script>
+           let age  = prompt("How old are you?");
+              if (age <= 18) {
+                alert("You are not old enough to play this game.");
+              } else {
+                alert("Welcome to the game!");
+              }
+        </script> -->
+        </body>
+        </html>
+        
+       
+ 
